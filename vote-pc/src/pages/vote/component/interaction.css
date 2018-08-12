@@ -1,0 +1,49 @@
+.interaction{
+    height:650px;
+}
+.left{
+    background: #fff;
+    /* border-right:1px solid #e6e6e6; */
+    height:640px;
+}
+.right{
+    height:650px;
+}
+.btn-wrap{
+    height:50px;
+    width:70px;
+    margin:0 auto;
+}
+.vote-content{
+    height:550px;
+    width:100%;
+    overflow-y: auto;
+    
+}
+.vote-content .list{
+    width:500px;
+    height:580px;
+    margin:0 auto;
+}
+.list span {
+    margin-left:10px;
+    font-size: 25px;
+    /* height:40px; */
+    /* line-height: 40px; */
+    /* display: inline-block; */
+}
+
+
+.right .image-wrap{
+    height:400px;
+}
+.image-wrap .image-content{
+    width:300px;
+    height:300px;
+    border:1px solid #e6e6e6;
+    border-radius: 5px;
+    margin: 48px auto;
+}
+.winner-wrap{
+    width:90%;
+}

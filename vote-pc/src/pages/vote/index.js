@@ -15,6 +15,7 @@ class Vote extends React.Component{
                 <div style={{maxHeight: '700px',minHeight:'650px', width: '100%', background:'#fff',marginTop:'10px'} }>
                     <VoteTabs></VoteTabs>
                 </div>
+                <div></div>
                 <div style={{maxHeight: '300px',minHeight:'100px', width: '100%', background:'#fff',display: 'flex', alignItems: 'center', justifyContent: 'center',marginTop:'10px'} }>
                     footer
                 </div>
