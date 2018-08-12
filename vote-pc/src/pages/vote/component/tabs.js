@@ -1,6 +1,9 @@
 import { Tabs } from 'antd';
 import React from 'react';
-import ScoreBar from './charts'
+import ScoreBar from './charts';//成绩公布
+import GuideWrap from './guide'; //打分指南
+import Interaction from './interaction';    //现场互动
+
 const TabPane = Tabs.TabPane;
 
 function callback(key) {
@@ -24,14 +27,18 @@ export default class VoteTabs extends React.Component {
         return (
             <Tabs defaultActiveKey="1" onChange={this.handleChangeKey}>
                 <TabPane forceRender={true} tab="一步一步" key="1">Content of Tab Pane 1</TabPane>
-                <TabPane tab="打分指南" key="2">Content of Tab Pane 2</TabPane>
+                <TabPane tab="打分指南" key="2">
+                <GuideWrap></GuideWrap>
+                </TabPane>
                 <TabPane tab="成绩公布" key="3">
                     {
                         this.state.activeTab == '3' ? <ScoreBar></ScoreBar> : null
                     }
                     
                 </TabPane>
-                <TabPane tab="现场互动" key="4">Content of Tab Pane 4</TabPane>
+                <TabPane tab="现场互动" key="4">
+                    <Interaction></Interaction>
+                </TabPane>
                 <TabPane tab="迪凯尔医疗" key="5">Content of Tab Pane 5</TabPane>
             </Tabs>
         );
