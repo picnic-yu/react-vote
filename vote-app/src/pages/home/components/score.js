@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'antd-mobile';
+import axios from 'axios';
 export default class Score extends React.Component{
     constructor(props){
         super(props);
@@ -8,6 +9,17 @@ export default class Score extends React.Component{
         }
     }
     handleStateChange(v){
+        var formData = new FormData();
+        formData.append('score', v);
+        axios.post('/score/create', formData,{
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        }).then(function (response) {
+            console.log(response);
+        }).catch(function (error) {
+            console.log(error);
+        });
         this.props.handleStateChange(v)
     }
     render(){

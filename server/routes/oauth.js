@@ -39,13 +39,12 @@ router.get('/get_wx_access_token/:code', (ctx,next)=>{
                             // 第四步：根据获取的用户信息进行对应操作
                             var userinfo = JSON.parse(body);
                             //console.log(JSON.parse(body));
-                            console.log('获取微信信息成功！');
-                            console.log(userinfo)
                             ctx.body = {
                                 code: 200,
                                 content:userinfo,
                                 message: '成功获取用户信息'
                             }
+                            console.log(ctx)
                             // // 小测试，实际应用中，可以由此创建一个帐户
                             // res.send("\
                             //     <h1>"+userinfo.nickname+" 的个人信息</h1>\
