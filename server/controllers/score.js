@@ -8,9 +8,20 @@ class ScoreController {
    * @returns {Promise.<void>}
    */
   	static async createScore (ctx) {
-        const score = ctx.request.body;
-    
-		if (score.score && score.member) {
+		  console.log(ctx)
+		console.log(ctx.session.nickname)
+		const score = ctx.request.body;
+		console.log(ctx.session.openid)
+		console.log(ctx.session.headimgurl)
+		// const userInfo = ctx.cookies.get('userInfo');
+		// console.log(userInfo,'userInfo')
+		if (score.score ) {
+			
+
+			// return ctx.body = {
+            //     code: 1,
+            //     message: '创建成功'
+            // };
 			// const existUser = await scoreModel.findUserByName(user.name)
 			// if (existUser) {
 			// 	ctx.body = {
