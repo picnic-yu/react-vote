@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'antd-mobile';
 import axios from 'axios';
+import BASE_URL from '../../../api/config';
 export default class Score extends React.Component{
     constructor(props){
         super(props);
@@ -11,11 +12,7 @@ export default class Score extends React.Component{
     handleStateChange(v){
         var formData = new FormData();
         formData.append('score', v);
-        axios.post('/score/create', formData,{
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        }).then(function (response) {
+        axios.post(`${BASE_URL}/score/create`, {score:v}).then(function (response) {
             console.log(response);
         }).catch(function (error) {
             console.log(error);
