@@ -3,7 +3,8 @@ import HomeTab from './components/tabs';
 import {  connect } from 'react-redux';
 import {changeScore,changeState} from '../../redux/score/index';
 import {getOpenId, getUrlParams} from '../../util';
-import {getUserInfo} from '../../api/vote'
+import BASE_URL from '../../api/config';
+import axios from 'axios';
 const appid = 'wx7cdd5e1b8c037a66';
 let local = window.location.href;
 const code = getUrlParams('code');
@@ -12,7 +13,13 @@ let url = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&re
 if(code == null || code ==''){
     window.location.href = url;
 }else{
-    getUserInfo(code);
+    axios.get(`${BASE_URL}/get_wx_access_token/${code}`).then((response)=> {
+        console.log(response.data);
+        console.log(response.status);
+        console.log(response.statusText);
+        console.log(response.headers);
+        console.log(response.config);
+    });
 }
 //定义组件
 @connect(state=> {

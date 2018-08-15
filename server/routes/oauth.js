@@ -10,12 +10,12 @@ const router = new Router({
 var AppID = 'wx7cdd5e1b8c037a66';
 var AppSecret = '4db0747616ee9b03bc3a67d12d498e3c';
 
-router.get('/get_wx_access_token', function(req,res, next){
+router.get('/get_wx_access_token/:code', (ctx,next)=>{
     //console.log("get_wx_access_token")
     //console.log("code_return: "+req.query.code)
     
     // 第二步：通过code换取网页授权access_token
-    var code = req.query.code;
+    var code = ctx.params.code;
     request.get(
         {   
             url:'https://api.weixin.qq.com/sns/oauth2/access_token?appid='+AppID+'&secret='+AppSecret+'&code='+code+'&grant_type=authorization_code',
