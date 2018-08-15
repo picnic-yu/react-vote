@@ -11,6 +11,7 @@
     "bcryptjs": "2.4.3",
     "jsonwebtoken": "7.4.1",
     "koa": "^2.2.0",
+    "koa-better-body": "^3.0.4",
     "koa-bodyparser": "4.2.0",
     "koa-jwt": "3.2.2",
     "koa-logger": "^3.2.0",
