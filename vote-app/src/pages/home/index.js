@@ -57,12 +57,14 @@ class Home extends React.Component {
         return (
             // <div></div>
             <div style={{ position: 'fixed', height: '100%',  width: '100%', top: 0 } }>
-                <div style={{height: '30vh', width: '100%', background:'#fff',display: 'flex', alignItems: 'center', justifyContent: 'center',} }>
-                    top界面{userInfo.nickname}
+                <div style={{height: '32vh', width: '100%', background:'#fff',display: 'flex', alignItems: 'center', justifyContent: 'center',} }>
+                    <img style={{height: '34vh', width: '100vw'} } src='http://new.szdtb.com/image/kaidier-bg.jpg' />
+                    
                 </div>
                <HomeTab score={score} handleInputChange={handleInputChange} handleStateChange={handleStateChange}></HomeTab>
-               <div style={{height: '14vh', width: '100%', background:'#fff', display: 'flex', alignItems: 'center', justifyContent: 'center',} }>
-                    底部
+               <div style={{height: '12vh', width: '100%', background:'#fff',textAlign:'center',padding:'1vh 0'} }>
+                    <p >活动最终解释权</p>
+                    <p>归苏州迪凯尔医疗科技有限公司所有</p>
                 </div>
             </div>
         );

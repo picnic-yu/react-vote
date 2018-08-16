@@ -24,7 +24,7 @@ export default class Score extends React.Component{
                 Toast.success('成功打分', 2);
                 this.props.handleStateChange(v);
             }else if (response.data.code == 100){
-                Toast.fail("您已经对改成员打分了", 2);
+                Toast.fail("您已经对该成员打分了", 2);
             }else{
                 Toast.fail("操作失败", 2);
             }
