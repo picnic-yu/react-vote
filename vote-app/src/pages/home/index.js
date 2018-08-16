@@ -18,7 +18,7 @@ if(code == null || code ==''){
     const startIndex = window.location.href.indexOf('member');
     const member =  window.location.href.slice(startIndex,startIndex+8).split('=')[1];
     setCookie('member',member);
-    window.location.href = url;
+    // window.location.href = url;
     
 }else{
     axios.get(`${BASE_URL}/get_wx_access_token/${code}`).then((response)=> {
@@ -56,13 +56,14 @@ class Home extends React.Component {
         console.log(this.props)
         return (
             // <div></div>
-            <div style={{ position: 'fixed', height: '100%',  width: '100%', top: 0 } }>
+            <div style={{ position: 'fixed', height: '100%',  width: '100%', top: 0,overflowY:'auto' } }>
                 <div style={{height: '32vh', width: '100%', background:'#fff',display: 'flex', alignItems: 'center', justifyContent: 'center',} }>
                     <img style={{height: '34vh', width: '100vw'} } src='http://new.szdtb.com/image/kaidier-bg.jpg' />
                     
+                    
                 </div>
                <HomeTab score={score} handleInputChange={handleInputChange} handleStateChange={handleStateChange}></HomeTab>
-               <div style={{height: '12vh', width: '100%', background:'#fff',textAlign:'center',padding:'1vh 0'} }>
+               <div style={{height: '12vh', width: '100%', background:'#1B7FA0',textAlign:'center',padding:'1vh 0'} }>
                     <p >活动最终解释权</p>
                     <p>归苏州迪凯尔医疗科技有限公司所有</p>
                 </div>

@@ -5,6 +5,7 @@ import Title from './title';
 import Score from './score';
 import Result from './result';
 import ScoreForm from './scoreForm';
+import Step from './step';
 function renderTabBar(props) {
     return (<Sticky>
         {({ style }) => <div style={{ ...style, zIndex: 1 }}><Tabs.DefaultTabBar {...props} /></div>}
@@ -33,8 +34,8 @@ const HomeTab = (props) => (
             initalPage={'t2'}
             renderTabBar={renderTabBar}
         >
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '46vh', backgroundColor: '#fff' }}>
-            一步一步
+            <div style={{  backgroundColor: '#fff' }}>
+                <Step></Step>
             </div>
             <div style={{  height: '46vh', backgroundColor: '#fff' }}>
                 <Title></Title>
