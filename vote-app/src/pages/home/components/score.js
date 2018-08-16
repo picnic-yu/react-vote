@@ -19,7 +19,7 @@ export default class Score extends React.Component{
         const headimgurl = getCookie('headimgurl');
         const member = getCookie('member');
         const score = this.props.score.score;
-        axios.post(`${BASE_URL}/score/create`, {score,nickname,openid,headimgurl,member}).then(function (response) {
+        axios.post(`${BASE_URL}/score/create`, {score,nickname,openid,headimgurl,member}).then( (response) =>  {
             if(response.data.code == 200 ){
                 Toast.success('成功打分', 2);
                 this.props.handleStateChange(v);
