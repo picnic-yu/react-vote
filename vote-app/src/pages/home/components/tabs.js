@@ -6,6 +6,7 @@ import Score from './score';
 import Result from './result';
 import ScoreForm from './scoreForm';
 import Step from './step';
+import Product from './product';
 function renderTabBar(props) {
     return (<Sticky>
         {({ style }) => <div style={{ ...style, zIndex: 1 }}><Tabs.DefaultTabBar {...props} /></div>}
@@ -43,8 +44,8 @@ const HomeTab = (props) => (
                     content(props)
                 }
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '46vh', backgroundColor: '#fff' }}>
-            迪凯尔医疗迪凯尔医疗
+            <div style={{  backgroundColor: '#fff' }}>
+                <Product></Product>
             </div>
         </Tabs>
         </StickyContainer>
