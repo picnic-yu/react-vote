@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, InputItem } from 'antd-mobile';
+import { Button, InputItem, Toast } from 'antd-mobile';
 import { createForm } from 'rc-form';
 import {getCookie} from '../../../util';
 var now = new Date();
@@ -38,7 +38,14 @@ class Score extends React.Component{
         this.props.handleInputChange(v);
     }
     handleStateChange(){
-        this.props.handleStateChange(2)
+        var reg = new RegExp("^(\\d|[1-9]\\d|100)$");
+        const value = this.props.score.score;
+        if(!reg.test(value)) {
+            Toast.fail("请输入0-100的整数", 2);
+        }else{
+            this.props.handleStateChange(2)
+        }
+        
     }
     render(){
         const { getFieldProps } = this.props.form;

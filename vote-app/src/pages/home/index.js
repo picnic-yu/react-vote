@@ -1,5 +1,4 @@
 import React from 'react';
-import { Toast } from 'antd-mobile';
 import HomeTab from './components/tabs';
 import {  connect } from 'react-redux';
 import {changeScore,changeState} from '../../redux/score/index';
@@ -37,7 +36,6 @@ if(code == null || code ==''){
             setCookie('openid',response.data.content.openid);
             setCookie('headimgurl',response.data.content.headimgurl);
         }
-        // Toast.info(JSON.stringify(response.data.code))
         // 调试用
     })
     
