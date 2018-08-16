@@ -23,14 +23,14 @@ export const getOpenId = (url) => {
 }
 
 /* 写cookie */
-function setCookie(name, value) {
+export const setCookie = (name, value)=> {
     var Days = 30;
     var exp = new Date();
     exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
     document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + ";path=/";
 }
 /* 读cookie */
-function getCookie(name) {
+export const getCookie =(name)=> {
     var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
     if (arr != null) {
         return unescape(arr[2]);
