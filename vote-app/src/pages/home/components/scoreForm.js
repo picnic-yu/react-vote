@@ -2,10 +2,10 @@ import React from 'react';
 import { Button, InputItem } from 'antd-mobile';
 import { createForm } from 'rc-form';
 import {getCookie} from '../../../util';
-
-const now = new Date();
-const hour = now.getHours(); 
-let dayMoment = '上午'
+var now = new Date();
+var hour = now.getHours(); 
+// let dayMoment = '上午';
+var dayMoment = '111';
 if(hour < 6){
     dayMoment = '凌晨';
 }else if (hour < 9) {
@@ -13,17 +13,17 @@ if(hour < 6){
 }else if(hour < 12) {
     dayMoment = '上午';
 }else if (hour < 14 ) {
-
+    dayMoment = '中午';
+}else if (hour < 17 ) {
+    dayMoment = '下午';
+}else if (hour < 19 ) {
+    dayMoment = '傍晚';
+}else if (hour < 22 ) {
+    dayMoment = '晚上';
+}else{
+    dayMoment = '夜里';
 }
-// if(hour < 6){
-//     document.write("凌晨好！")} 
-// else if (hour < 9){document.write("早上好！")} 
-// else if (hour < 12){document.write("上午好！")} 
-// else if (hour < 14){document.write("中午好！")} 
-// else if (hour < 17){document.write("下午好！")} 
-// else if (hour < 19){document.write("傍晚好！")} 
-// else if (hour < 22){document.write("晚上好！")} 
-// else {document.write("夜里好！")} 
+
 
 
 class Score extends React.Component{
@@ -44,11 +44,15 @@ class Score extends React.Component{
         const { getFieldProps } = this.props.form;
         const {score, handleInputChange, handleStateChange } = this.props;
         const member = getCookie('member');
+        
+       
+        const monthNumber = new Date().getMonth() + 1;
+        const dayNumber = new Date().getDate();
         return(
             <div style={{ height: '30vh', width:"70%",margin: "0 auto",}}>
                 <div style={{ height: '13vh', width:"80%",margin: "0 auto",border:'1px solid #108ee9', borderRadius:'5px'}}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '50%',  }}>
-                        8月29日 下午
+                        {monthNumber}月{dayNumber} 日{dayMoment}
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '50%', fontSize:'18px' }}>
                         {member}号操作者
