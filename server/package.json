@@ -21,6 +21,7 @@
     "mysql": "2.13.0",
     "nodemon": "^1.18.1",
     "request": "^2.88.0",
+    "request-promise": "^4.2.2",
     "sequelize": "3.30.4"
   },
   "devDependencies": {

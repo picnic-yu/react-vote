@@ -6,11 +6,15 @@ module.exports = function (sequelize, DataTypes) {
             primaryKey: true,
             autoIncrement: true
         },
-        userName: {
+        nickname: {
             type: DataTypes.STRING(50),
             allowNull: true
         },
-        image: {
+        headimgurl: {
+            type: DataTypes.STRING(255),
+            allowNull: true
+        },
+        openid:{
             type: DataTypes.STRING(255),
             allowNull: true
         },
@@ -20,7 +24,7 @@ module.exports = function (sequelize, DataTypes) {
         },
         member:{
             type: DataTypes.STRING(255),
-            allowNull: false, defaultValue: 'member-1'
+            allowNull: false, defaultValue: '1'
         }
     }, {
       tableName: 'score'

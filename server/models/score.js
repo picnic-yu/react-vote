@@ -12,14 +12,15 @@ class ScoreModel {
 	//  * @param name  姓名
 	//  * @returns {Promise.<*>}
 	//  */
-	// static async findUserByName (name) {
-	// 	const userInfo = await User.findOne({
-	// 		where: {
-	// 			name
-	// 		}
-	// 	})
-	// 	return userInfo
-  	// }
+	static async findOneByOpenid (openid,member) {
+		const scoreInfo = await Score.findOne({
+			where: {
+				openid,
+				member
+			}
+		})
+		return scoreInfo
+  	}
 
 	/**
 	 * 创建分数

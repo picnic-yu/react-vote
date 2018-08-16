@@ -24,7 +24,7 @@ app.use(bodyParser())
 // }));
 // app.use(jwt({secret: secret.sign}).unless({path: [/^\/api\/login/, /^\/api\/createUser/]}))
 
-app.keys = ['nickname'];
+app.keys = ['nickname','openid','headimgurl'];
 const CONFIG = {
 	key: 'koa:sess',   //cookie key (default is koa:sess)
 	maxAge: 86400000,  // cookie的过期时间 maxAge in ms (default is 1 days)
@@ -32,7 +32,7 @@ const CONFIG = {
 	httpOnly: true, //cookie是否只有服务器端可以访问 httpOnly or not (default true)
 	signed: true,   //签名默认true
 	rolling: false,  //在每次请求时强行设置cookie，这将重置cookie过期时间（默认：false）
-	renew: false,  //(boolean) renew session when session is nearly expired,
+	renew: true,  //(boolean) renew session when session is nearly expired,
 };
 app.use(session(CONFIG, app));
 app.use(router());
