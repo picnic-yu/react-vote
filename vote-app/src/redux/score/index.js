@@ -16,7 +16,9 @@ export const changeUserInfoAction = {
 const initialState = {
     score: '',
     state:1,
-    userInfo:'333'
+    userInfo:{
+        nickname:'222'
+    }
 }
 export default function reducer (state = initialState, action)  {
     const newState = Object.assign({},state)
@@ -34,7 +36,7 @@ export default function reducer (state = initialState, action)  {
         case 'CHANGE_USERINFO':
             
             return Object.assign(newState, {
-                state: action.payload
+                userInfo: action.payload
             })
         default:
             return initialState;

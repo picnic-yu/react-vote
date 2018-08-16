@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from 'antd-mobile';
 import axios from 'axios';
 import BASE_URL from '../../../api/config';
+import {getCookie} from '../../../util';
 export default class Score extends React.Component{
     constructor(props){
         super(props);
@@ -10,9 +11,12 @@ export default class Score extends React.Component{
         }
     }
     handleStateChange(v){
-        var formData = new FormData();
-        formData.append('score', v);
-        axios.post(`${BASE_URL}/score/create`, {score:v}).then(function (response) {
+        const openid = getCookie('openid');
+        const nickname = getCookie('nickname');
+        const headimgurl = getCookie('headimgurl');
+        const member = getCookie('member');
+        const score = this.props.score.score;
+        axios.post(`${BASE_URL}/score/create`, {score,nickname,openid,headimgurl,member}).then(function (response) {
             console.log(response);
         }).catch(function (error) {
             console.log(error);
@@ -28,7 +32,7 @@ export default class Score extends React.Component{
                         您给操作者的评分为
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '50%', fontSize:'18px' }}>
-                        85分
+                        {score.score}分
                     </div>
                 </div>
                 <div style={{ height: '10vh', width:"70%",margin: "0 auto", }}>
