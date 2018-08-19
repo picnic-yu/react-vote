@@ -21,6 +21,8 @@ export const getOpenId = (url) => {
         }
     }
 }
+export const BASE_URL = '/api'
+
 
 /* 写cookie */
 export const setCookie = (name, value)=> {

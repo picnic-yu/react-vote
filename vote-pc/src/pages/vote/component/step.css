@@ -1,0 +1,41 @@
+.step{
+    margin: 0 auto;
+    font-size: 25px;
+    width:850px;
+    height:auto;
+}
+.stepWrap{
+    padding-bottom:10px;
+}
+.step-title{
+    text-align: center;
+}
+.title{
+    text-indent: 2em; 
+}
+.desStep{
+    word-break: break-all;
+    text-indent: 2em;
+    padding:10px;
+    line-height:50px;
+}
+.redColor{
+    color:red;
+}
+.left{
+    width:40%;
+    display: inline-block;
+}
+.right{
+    width:60%;
+    padding-left:30px;
+    display: inline-block;
+    vertical-align: top;
+}
+.right p:first{
+    font-weight: 100;
+    color:black;
+}
+.right p{
+    line-height: 50px;
+}

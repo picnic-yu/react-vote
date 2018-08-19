@@ -1,3 +1,6 @@
+.topWrap{
+    
+}
 .interaction{
     height:650px;
 }
@@ -46,4 +49,8 @@
 }
 .winner-wrap{
     width:90%;
+}
+.nickname{
+    display: inline-block;
+    width:200px;
 }

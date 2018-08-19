@@ -3,7 +3,8 @@ import React from 'react';
 import ScoreBar from './charts';//成绩公布
 import GuideWrap from './guide'; //打分指南
 import Interaction from './interaction';    //现场互动
-
+import Company from './company';
+import Step from './step';
 const TabPane = Tabs.TabPane;
 
 function callback(key) {
@@ -25,8 +26,10 @@ export default class VoteTabs extends React.Component {
     }
     render(){
         return (
-            <Tabs defaultActiveKey="1" onChange={this.handleChangeKey}>
-                <TabPane forceRender={true} tab="一步一步" key="1">Content of Tab Pane 1</TabPane>
+            <Tabs size='large' defaultActiveKey="1" onChange={this.handleChangeKey}>
+                <TabPane forceRender={true} tab="一步一步" key="1">
+                    <Step></Step>
+                </TabPane>
                 <TabPane tab="打分指南" key="2">
                 <GuideWrap></GuideWrap>
                 </TabPane>
@@ -39,7 +42,7 @@ export default class VoteTabs extends React.Component {
                 <TabPane tab="现场互动" key="4">
                     <Interaction></Interaction>
                 </TabPane>
-                <TabPane tab="迪凯尔医疗" key="5">Content of Tab Pane 5</TabPane>
+                <TabPane tab="迪凯尔医疗" key="5"><Company></Company></TabPane>
             </Tabs>
         );
     }

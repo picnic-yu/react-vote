@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button } from 'antd';
 import { Layout } from 'antd';
-import VoteTabs from './component/tabs'
+import VoteTabs from './component/tabs';
+
 const { Header, Footer, Sider, Content } = Layout;
 //定义组件
 class Vote extends React.Component{
@@ -9,15 +10,14 @@ class Vote extends React.Component{
         
         return (
             <div style={{background:'#e9e9e9'}}>
-                <div style={{maxHeight: '400px',minHeight:'300px', width: '100%', background:'#fff',display: 'flex', alignItems: 'center', justifyContent: 'center',} }>
-                    top
+                <div className='topWrap' style={{height:'900px', width: '100%', background:'#fff',display: 'flex', alignItems: 'center', justifyContent: 'center',} }>
+                    <img style={{height: '100%', width: '100%'} } src='http://new.szdtb.com/image/kaidier-bg.jpg' />
                 </div>
-                <div style={{maxHeight: '700px',minHeight:'650px', width: '100%', background:'#fff',marginTop:'10px'} }>
+                <div style={{ width: '100%', background:'#fff'} }>
                     <VoteTabs></VoteTabs>
                 </div>
-                <div></div>
-                <div style={{maxHeight: '300px',minHeight:'100px', width: '100%', background:'#fff',display: 'flex', alignItems: 'center', justifyContent: 'center',marginTop:'10px'} }>
-                    footer
+                <div style={{height: '60px', width: '100%',fontSize:'25px',color:'#fff', background:'#1B7FA0',display: 'flex', alignItems: 'center', justifyContent: 'center'} }>
+                    活动最终解释权归苏州迪凯尔医疗科技有限公司所有
                 </div>
             </div>
         );
