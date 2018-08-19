@@ -36,7 +36,15 @@ class ScoreController {
 		}
 	}
 
-	
+	static async getAverage (ctx) {
+		const list = await scoreModel.getAvarageScoreList();	
+		console.log(list,'results')
+		ctx.body = {
+			code: 200,
+			message: '创建成功',
+			list
+		}
+	}
 }
 
 module.exports = ScoreController

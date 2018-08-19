@@ -31,6 +31,15 @@ class ScoreModel {
 		await Score.create(score)
 		return true
 	}
+
+	static async getAvarageScoreList () {
+		return new Promise((resolve,reject) => {
+			sequelize.query("SELECT avg(score) as avg  FROM score GROUP BY member").spread((results, metadata) => {
+				// 结果将是一个空数组，元数据将包含受影响的行数。
+				resolve(results);
+			})
+		})
+	}
 }
 
 module.exports = ScoreModel
