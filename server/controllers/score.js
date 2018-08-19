@@ -42,9 +42,19 @@ class ScoreController {
 		ctx.body = {
 			code: 200,
 			message: '创建成功',
-			list
+			content:list
 		}
 	}
+	static async getWxUserList (ctx) {
+		const list = await scoreModel.getWxUserList();	
+		console.log(list,'results')
+		ctx.body = {
+			code: 200,
+			message: '创建成功',
+			content:list
+		}
+	}
+	
 }
 
 module.exports = ScoreController
