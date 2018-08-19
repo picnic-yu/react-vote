@@ -38,17 +38,18 @@
 
 
 .right .image-wrap{
-    height:400px;
+    height:300px;
 }
 .image-wrap .image-content{
     width:300px;
     height:300px;
     border:1px solid #e6e6e6;
     border-radius: 5px;
-    margin: 48px auto;
+    margin: 38px auto;
 }
 .winner-wrap{
     width:90%;
+    padding:15px;
 }
 .nickname{
     display: inline-block;
