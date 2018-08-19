@@ -20,8 +20,15 @@ class ScoreModel {
 			}
 		})
 		return scoreInfo
-  	}
-
+	}
+	static async findListByMember (member) {
+		const user = await Score.findAll({
+			where: {
+				member
+			}
+		})
+		return user
+	}
 	/**
 	 * 创建分数
 	 * @param score
