@@ -12,15 +12,23 @@ class ScoreModel {
 	//  * @param name  姓名
 	//  * @returns {Promise.<*>}
 	//  */
-	// static async findUserByName (name) {
-	// 	const userInfo = await User.findOne({
-	// 		where: {
-	// 			name
-	// 		}
-	// 	})
-	// 	return userInfo
-  	// }
-
+	static async findOneByOpenid (openid,member) {
+		const scoreInfo = await Score.findOne({
+			where: {
+				openid,
+				member
+			}
+		})
+		return scoreInfo
+	}
+	static async findListByMember (member) {
+		const user = await Score.findAll({
+			where: {
+				member
+			}
+		})
+		return user
+	}
 	/**
 	 * 创建分数
 	 * @param score
@@ -29,6 +37,24 @@ class ScoreModel {
 	static async createScore (score) {
 		await Score.create(score)
 		return true
+	}
+
+	static async getAvarageScoreList () {
+		return new Promise((resolve,reject) => {
+			sequelize.query("SELECT avg(score) as avg  FROM score GROUP BY member").spread((results, metadata) => {
+				// 结果将是一个空数组，元数据将包含受影响的行数。
+				resolve(results);
+			})
+		})
+	}
+	static async getWxUserList () {
+		return new Promise((resolve,reject) => {
+			// sequelize.query("SELECT avg(score) as avg  FROM score GROUP BY member").spread((results, metadata) => {
+			sequelize.query("SELECT openid,nickname,headimgurl  FROM score GROUP BY openid").spread((results, metadata) => {
+				// 结果将是一个空数组，元数据将包含受影响的行数。
+				resolve(results);
+			})
+		})
 	}
 }
 

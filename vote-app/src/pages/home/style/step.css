@@ -1,0 +1,34 @@
+.stepWrap{
+    padding-bottom:10px;
+}
+.step-title{
+    text-align: center;
+}
+.title{
+    text-indent: 2em; 
+}
+.des{
+    word-break: break-all;
+    text-indent: 2em;
+    padding:10px;
+    line-height: 3.5vh;
+}
+.redColor{
+    color:red;
+}
+.left{
+    width:40vw;
+    display: inline-block;
+}
+.right{
+    width:60vw;
+    display: inline-block;
+    vertical-align: top;
+}
+.right p:first{
+    font-weight: 100;
+    color:black;
+}
+.right p{
+    line-height: 2.6vh;
+}

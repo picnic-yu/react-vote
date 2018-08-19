@@ -2,7 +2,7 @@ const Sequelize = require('sequelize')
 const config = {
   database: 'vote',
   username: 'root',
-  password: '666666',
+  password: 'szdtb',
   host: '127.0.0.1',
   port: 3306
 }

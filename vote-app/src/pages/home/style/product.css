@@ -1,0 +1,14 @@
+.product{
+    padding: 5px 0;
+}
+
+.scan{
+    width:65vw;
+    margin:0 auto;
+}
+.companyDec{
+    word-break: break-all;
+    text-indent: 2em;
+    padding:0 10px;
+    line-height: 4vh;
+}
