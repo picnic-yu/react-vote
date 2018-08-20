@@ -31,6 +31,22 @@ class OtherScoreModel {
 		await OtherScore.create(score)
 		return true
 	}
+	static async getComputer_score () {
+		return new Promise((resolve,reject) => {
+			sequelize.query("SELECT avg(computer_score) as computer_score  FROM other_score GROUP BY member").spread((results, metadata) => {
+				// 结果将是一个空数组，元数据将包含受影响的行数。
+				resolve(results);
+			})
+		})
+	}
+	static async getExpert_score () {
+		return new Promise((resolve,reject) => {
+			sequelize.query("SELECT avg(expert_score) as expert_score  FROM other_score GROUP BY member").spread((results, metadata) => {
+				// 结果将是一个空数组，元数据将包含受影响的行数。
+				resolve(results);
+			})
+		})
+	}
 }
 
 module.exports = OtherScoreModel
