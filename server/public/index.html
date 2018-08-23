@@ -13,23 +13,68 @@
         .list{
             width:90vw;
             margin: 0 auto;
+            height:54vh;
+        }
+        li{
+            height:8vh;
+        }
+        .wrap{
+            position:fixed;
+            height:100%;
+            width:100%;
+            top:0;
+            overflow-y:auto; 
+        }
+        .top-wrap{
+            height:34vh;
+            width:100%;
+            background:#fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            width:100%;
+            height:34vh;
+        }
+        .footer-wrap{
+            height:12vh;
+            width:100%;
+            background:#1B7FA0;
+            text-align: center;
+           
+        }
+        a{
+            text-decoration: none;
+            font-size: 2vh;
         }
         
     </style>
 </head>
 
 <body>
-    
-    <div class="list">
-        <ul>
-            <li><a href="http://new.szdtb.com/app/#/vote?member=1">1号选手</a></li>
-            <li><a href="http://new.szdtb.com/app/#/vote?member=2">2号选手</a></li>
-            <li><a href="http://new.szdtb.com/app/#/vote?member=3">3号选手</a></li>
-            <li><a href="http://new.szdtb.com/app/#/vote?member=4">4号选手</a></li>
-            <li><a href="http://new.szdtb.com/app/#/vote?member=5">5号选手</a></li>
-            <li><a href="http://new.szdtb.com/app/#/vote?member=6">6号选手</a></li>
-        </ul>
+    <div class='wrap' >
+        <div class='top-wrap'>
+            <img  src='http://new.szdtb.com/image/kaidier-bg.jpg' />
+            
+            
+        </div>
+        <div class="list">
+            <ul>
+                <li><a href="http://new.szdtb.com/app/#/vote?member=1">1号选手</a></li>
+                <li><a href="http://new.szdtb.com/app/#/vote?member=2">2号选手</a></li>
+                <li><a href="http://new.szdtb.com/app/#/vote?member=3">3号选手</a></li>
+                <li><a href="http://new.szdtb.com/app/#/vote?member=4">4号选手</a></li>
+                <li><a href="http://new.szdtb.com/app/#/vote?member=5">5号选手</a></li>
+                <li><a href="http://new.szdtb.com/app/#/vote?member=6">6号选手</a></li>
+            </ul>
+        </div>
+       <div class='footer-wrap' style={{height: '12vh', width: '100%', background:'#1B7FA0',textAlign:'center',padding:'1vh 0'} }>
+            <p >活动最终解释权</p>
+            <p>归苏州迪凯尔医疗科技有限公司所有</p>
+        </div>
     </div>
+    
 </body>
 
 </html>
