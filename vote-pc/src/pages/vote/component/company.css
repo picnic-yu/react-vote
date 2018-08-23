@@ -1,5 +1,6 @@
 .company{
-    width:830px;
+    /* width:830px; */
+    width:80%;
     height:auto;
     margin:0 auto;
 }
@@ -17,4 +18,25 @@
     padding:0 10px;
     font-size: 25px;
     line-height: 50px;
+}
+
+
+
+.item_wrap{
+    width:100%;
+    height:506px;
+}
+.item_wrap .content_left{
+    width:900px;
+    height:506px;
+    /* display:inline-block; */
+    
+     float:left;
+}
+.item_wrap .content_right{
+    width:calc(100% - 920px);
+    /* width:200px; */
+    height:506px;
+    /* display:inline-block; */
+    float:left;
 }

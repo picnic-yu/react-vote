@@ -13,8 +13,9 @@ function renderTabBar(props) {
     </Sticky>);
 }
 const tabs = [
-    { title: '一步一步' },
     { title: '现场评分' },
+    { title: '一步一步' },
+    
     { title: '迪凯尔医疗' },
 ];
 const content = (props) =>{

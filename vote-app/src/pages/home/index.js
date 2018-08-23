@@ -57,10 +57,8 @@ class Home extends React.Component {
         return (
             // <div></div>
             <div style={{ position: 'fixed', height: '100%',  width: '100%', top: 0,overflowY:'auto' } }>
-                <div style={{height: '32vh', width: '100%', background:'#fff',display: 'flex', alignItems: 'center', justifyContent: 'center',} }>
-                    <img style={{height: '34vh', width: '100vw'} } src='http://new.szdtb.com/image/kaidier-bg.jpg' />
-                    
-                    
+                <div style={{ width: '100%', background:'#fff',display: 'flex', alignItems: 'center', justifyContent: 'center',} }>
+                    <img  src='http://new.szdtb.com/image/kaidier-bg.jpg' />
                 </div>
                <HomeTab score={score} handleInputChange={handleInputChange} handleStateChange={handleStateChange}></HomeTab>
                <div style={{height: '12vh', width: '100%', background:'#1B7FA0',textAlign:'center',padding:'1vh 0'} }>

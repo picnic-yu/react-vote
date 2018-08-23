@@ -10,7 +10,7 @@ class Vote extends React.Component{
         
         return (
             <div style={{background:'#e9e9e9'}}>
-                <div className='topWrap' style={{height:'900px', width: '100%', background:'#fff',display: 'flex', alignItems: 'center', justifyContent: 'center',} }>
+                <div className='topWrap' style={{ width: '100%', background:'#fff',display: 'flex', alignItems: 'center', justifyContent: 'center',} }>
                     <img style={{height: '100%', width: '100%'} } src='http://new.szdtb.com/image/kaidier-bg.jpg' />
                 </div>
                 <div style={{ width: '100%', background:'#fff'} }>

@@ -114,11 +114,12 @@ export default class Interaction extends React.Component {
     render(){
         return(
             <div className="interaction">
-                <Row gutter={16}>
+         
+                <Row >
                     
           
             
-                    <Col className="left" span={12}>
+                    <Col className="left" span={19}>
                         <Spin spinning={this.state.scoreLoading}>
                         <div className="btn-wrap">
                             <Button 
@@ -135,7 +136,7 @@ export default class Interaction extends React.Component {
                                         <div key = {item.headimgurl+index} style={{display: 'flex',padding:'5px'}}>
                                             <Avatar size='large' src={item.headimgurl}/>
                                             <span className='nickname'>{item.nickname}</span>
-                                            <span className='score'>打出 {item.score} 分</span>
+                                            <span className='score'> {item.member} 号选手 {item.score} 分</span>
                                         </div>
                                     )})
                                 }
@@ -145,7 +146,7 @@ export default class Interaction extends React.Component {
                         </Spin>
                     </Col>
                 
-                    <Col className="right" span={12}>
+                    <Col className="right" span={5}>
                         <Spin spinning={this.state.luckyLoading}>
                             <div className="btn-wrap">
                                 <Button 
