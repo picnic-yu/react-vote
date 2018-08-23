@@ -18,7 +18,7 @@ if(code == null || code ==''){
     const startIndex = window.location.href.indexOf('member');
     const member =  window.location.href.slice(startIndex,startIndex+8).split('=')[1];
     setCookie('member',member);
-    window.location.href = url;
+    // window.location.href = url;
     
 }else{
     axios.get(`${BASE_URL}/get_wx_access_token/${code}`).then((response)=> {
@@ -58,7 +58,7 @@ class Home extends React.Component {
             // <div></div>
             <div style={{ position: 'fixed', height: '100%',  width: '100%', top: 0,overflowY:'auto' } }>
                 <div style={{ width: '100%', background:'#fff',display: 'flex', alignItems: 'center', justifyContent: 'center',} }>
-                    <img  src='http://new.szdtb.com/image/kaidier-bg.jpg' />
+                    <img  style={{ width: '100%'}}src='http://new.szdtb.com/image/kaidier-bg.jpg' />
                 </div>
                <HomeTab score={score} handleInputChange={handleInputChange} handleStateChange={handleStateChange}></HomeTab>
                <div style={{height: '12vh', width: '100%', background:'#1B7FA0',textAlign:'center',padding:'1vh 0'} }>
