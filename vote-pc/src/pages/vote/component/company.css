@@ -22,21 +22,21 @@
 
 
 
-.item_wrap{
+.step_wrap{
     width:100%;
-    height:506px;
+    
 }
-.item_wrap .content_left{
+.step_wrap .content_left{
     width:900px;
-    height:506px;
+    
     /* display:inline-block; */
     
      float:left;
 }
-.item_wrap .content_right{
+.step_wrap .content_right{
     width:calc(100% - 920px);
     /* width:200px; */
-    height:506px;
+   
     /* display:inline-block; */
     float:left;
 }
