@@ -32,19 +32,20 @@ const HomeTab = (props) => (
     <div>
         <WhiteSpace />
         <StickyContainer>
-        <Tabs tabs={tabs}
+        <Tabs tabs={tabs} swipeable={false}
             initalPage={'t2'}
             renderTabBar={renderTabBar}
         >
-            <div style={{  backgroundColor: '#fff' }}>
-                <Step></Step>
-            </div>
             <div style={{  height: '46vh', backgroundColor: '#fff' }}>
                 <Title></Title>
                 {
                     content(props)
                 }
             </div>
+            <div style={{  backgroundColor: '#fff' }}>
+                <Step></Step>
+            </div>
+            
             <div style={{  backgroundColor: '#fff' }}>
                 <Product></Product>
             </div>
