@@ -56,8 +56,8 @@ class Score extends React.Component{
         const monthNumber = new Date().getMonth() + 1;
         const dayNumber = new Date().getDate();
         return(
-            <div style={{ height: '30vh', width:"70%",margin: "0 auto",}}>
-                <div style={{ height: '13vh', width:"80%",margin: "0 auto",border:'1px solid #108ee9', borderRadius:'5px'}}>
+            <div style={{ height: '32vh', width:"80%",margin: "0 auto",}}>
+                <div style={{ height: '15vh', width:"80%",margin: "0 auto",border:'1px solid #108ee9', borderRadius:'5px'}}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '50%',  }}>
                         {monthNumber}月{dayNumber} 日{dayMoment}
                     </div>

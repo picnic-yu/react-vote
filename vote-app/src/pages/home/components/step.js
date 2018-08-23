@@ -18,7 +18,7 @@ export default class Step extends React.Component{
                 <p className='step-title'>一步一步做好护理四手操作</p>
                 <h3 className ='title'>“一步一步”是什么？</h3>
                 <p className='des'>临床规范化体验区，一步一步操作班，顾名思义，就是：专家一步一步的进行规范化操作演示，学员一步一步跟随操作。当然，实操之前少不了操作规范以及操作技巧的讲解。除了“一步一步”系列，现场还有“让我们一起CADCAM”，以及“牙体制备技术推荐与体验”等临床实用现场操作体验课程，全方位满足广大口腔医师的实操需求。</p>
-                <h3>通过操作班的学习能得到什么？</h3>
+                <h3 className ='title'>通过操作班的学习能得到什么？</h3>
                 <p className='des'>专家现场指导，掌握最实用的技巧和要点，体验最前沿的产品，还能获得国家级I类继续医学教育学分8分。</p>
                 <div className='left'>
                     <img style={{ width: '100%'} } src='http://new.szdtb.com/image/tan.png' />

@@ -18,7 +18,7 @@ if(code == null || code ==''){
     const startIndex = window.location.href.indexOf('member');
     const member =  window.location.href.slice(startIndex,startIndex+8).split('=')[1];
     setCookie('member',member);
-    window.location.href = url;
+    // window.location.href = url;
     
 }else{
     axios.get(`${BASE_URL}/get_wx_access_token/${code}`).then((response)=> {

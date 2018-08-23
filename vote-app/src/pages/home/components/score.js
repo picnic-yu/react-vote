@@ -36,7 +36,7 @@ export default class Score extends React.Component{
     render(){
         const {score,  handleStateChange } = this.props;
         return(
-            <div style={{ height: '30vh', width:"70%",margin: "0 auto",border:'1px solid #108ee9', borderRadius:'5px' }}>
+            <div style={{ height: '30vh', width:"80%",margin: "0 auto",border:'1px solid #108ee9', borderRadius:'5px' }}>
                 <div style={{ height: '20vh', width:"70%",margin: "0 auto", }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '50%',  }}>
                         您给操作者的评分为
@@ -45,7 +45,7 @@ export default class Score extends React.Component{
                         {score.score}分
                     </div>
                 </div>
-                <div style={{ height: '10vh', width:"70%",margin: "0 auto", }}>
+                <div style={{ height: '10vh', width:"90%",margin: "0 auto", }}>
                     <div style={{ width:'50%',display:'inline-block',padding:'0 3px'}}>
                         <Button type="primary" size="small" onClick={() => {this.handleStateChange(1)}}>重新打分</Button>
                     </div>
