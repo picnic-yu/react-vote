@@ -35,21 +35,13 @@ class ScoreController {
 			}
 		}
 	}
-	static async getUserByMember (ctx) {
+	static async getUserList (ctx) {
 		const score = ctx.request.body;
-		if (score.member ) {
-			const list = await scoreModel.findListByMember(score.member);
-			ctx.body = {
-				code: 200,
-				message: '创建成功',
-				content:list
-			}
-            
-		} else {
-			ctx.body = {
-				code: -1,
-				message: '参数错误'
-			}
+		const list = await scoreModel.getUserList();
+		ctx.body = {
+			code: 200,
+			message: '创建成功',
+			content:list
 		}
 	}
 	static async getAverage (ctx) {

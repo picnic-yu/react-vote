@@ -21,11 +21,9 @@ class ScoreModel {
 		})
 		return scoreInfo
 	}
-	static async findListByMember (member) {
+	static async getUserList () {
 		const user = await Score.findAll({
-			where: {
-				member
-			}
+			
 		})
 		return user
 	}
