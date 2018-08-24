@@ -7,17 +7,21 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
     <style>
         body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd { margin: 0px; padding: 0px; font-size: 12px; font-weight: normal; }
-        ul { list-style: none; }
+        ul { list-style: none; padding: 2vh 0 0 0;}
         img { border-style: none; }
 
         .list{
-            width:90vw;
             margin: 0 auto;
-            height:54vh;
+            height:56vh;
         }
         li{
-            height:8vh;
+            height:20vh;
+            
+            margin-bottom:3vh;
+            color:black;
+            text-align: center;
         }
+       
         .wrap{
             position:fixed;
             height:100%;
@@ -33,12 +37,21 @@
             align-items: center;
             justify-content: center;
         }
+        .btn{
+            width: 30vw;
+            margin: 0 auto;
+            height: 20vh;
+            line-height: 20vh;
+            background: #2d8cf0;
+            border-radius: 5px;
+        }
         img{
             width:100%;
-            height:34vh;
+            height:100%;
         }
         .footer-wrap{
-            height:12vh;
+            height:10vh;
+            line-height:5vh;
             width:100%;
             background:#1B7FA0;
             text-align: center;
@@ -46,7 +59,14 @@
         }
         a{
             text-decoration: none;
-            font-size: 2vh;
+            font-size: 3vh;
+            color:#fff;
+            
+        }
+        .item{
+            height:100%;
+            width:30vw;
+            display:inline-block;
         }
         
     </style>
@@ -61,12 +81,29 @@
         </div>
         <div class="list">
             <ul>
-                <li><a href="http://new.szdtb.com/app/#/vote?member=1">1号选手</a></li>
-                <li><a href="http://new.szdtb.com/app/#/vote?member=2">2号选手</a></li>
-                <li><a href="http://new.szdtb.com/app/#/vote?member=3">3号选手</a></li>
-                <li><a href="http://new.szdtb.com/app/#/vote?member=4">4号选手</a></li>
-                <li><a href="http://new.szdtb.com/app/#/vote?member=5">5号选手</a></li>
-                <li><a href="http://new.szdtb.com/app/#/vote?member=6">6号选手</a></li>
+                <li>
+                    <div class="item">
+                        <a href="http://new.szdtb.com/app/#/vote?member=1"><div class='btn'>1号选手</div></a>
+                    </div>
+                    <div class="item">
+                        <a href="http://new.szdtb.com/app/#/vote?member=2"><div class='btn'>2号选手</div></a>
+                    </div>
+                    <div class="item">
+                        <a href="http://new.szdtb.com/app/#/vote?member=3"><div class='btn'>3号选手</div></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <a href="http://new.szdtb.com/app/#/vote?member=4"><div class='btn'>4号选手</div></a>
+                    </div>
+                    <div class="item">
+                        <a href="http://new.szdtb.com/app/#/vote?member=5"><div class='btn'>5号选手</div></a>
+                    </div>
+                    <div class="item">
+                        <a href="http://new.szdtb.com/app/#/vote?member=6"><div class='btn'>6号选手</div></a>
+                    </div>
+                </li>
+                
             </ul>
         </div>
        <div class='footer-wrap' style={{height: '12vh', width: '100%', background:'#1B7FA0',textAlign:'center',padding:'1vh 0'} }>
