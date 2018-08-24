@@ -27,20 +27,21 @@ export default class VoteTabs extends React.Component {
     render(){
         return (
             <Tabs size='large' defaultActiveKey="1" onChange={this.handleChangeKey}>
-                <TabPane forceRender={true} tab="一步一步" key="1">
-                    <Step></Step>
+                
+                <TabPane tab="现场互动" key="1">
+                    <Interaction></Interaction>
                 </TabPane>
-                <TabPane tab="打分指南" key="2">
-                <GuideWrap></GuideWrap>
-                </TabPane>
-                <TabPane tab="成绩公布" key="3">
+                <TabPane tab="成绩公布" key="2">
                     {
-                        this.state.activeTab == '3' ? <ScoreBar></ScoreBar> : null
+                        this.state.activeTab == '2' ? <ScoreBar></ScoreBar> : null
                     }
                     
                 </TabPane>
-                <TabPane tab="现场互动" key="4">
-                    <Interaction></Interaction>
+                <TabPane tab="打分指南" key="3">
+                <GuideWrap></GuideWrap>
+                </TabPane>
+                <TabPane forceRender={true} tab="一步一步" key="4">
+                    <Step></Step>
                 </TabPane>
                 <TabPane tab="迪凯尔医疗" key="5"><Company></Company></TabPane>
             </Tabs>

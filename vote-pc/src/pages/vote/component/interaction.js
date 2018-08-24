@@ -10,6 +10,13 @@ const member =  window.location.href.slice(startIndex,startIndex+8).split('=')[1
 const renderList = (listArr) =>{
     listArr.map();
 }
+
+
+
+
+
+
+
 /**
           从数组中随机抽取数据 2016-09-09
       **/
@@ -44,6 +51,25 @@ export default class Interaction extends React.Component {
     }
     componentDidMount(){
        this.handleShowScore();
+        var speed=20;
+        var list=document.getElementById('list');
+        var list2=document.getElementById('list2');
+        var rule=document.getElementById('rule');
+        list2.innerHTML=list.innerHTML;
+        function Marquee(){
+            if(list2.offsetTop-rule.scrollTop<=0)
+                rule.scrollTop-=list.offsetHeight;
+            else{
+                rule.scrollTop++;
+            }
+            if(list2.offsetTop-rule.scrollTop == 600){
+                rule.scrollTop = 0;
+            }
+            console.log(list2.offsetTop-rule.scrollTop)
+        }
+        var MyMar=setInterval(Marquee,speed);
+        rule.onmouseover=function() {clearInterval(MyMar)}
+        rule.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
     }
     handleShowScore () {
         let scoreLoading = true;
@@ -112,8 +138,8 @@ export default class Interaction extends React.Component {
                                 type="primary" 
                                 className="btn">评分公示</Button>
                         </div>
-                        <div className="vote-content">
-                            <div className="list">
+                        <div id="rule" className="vote-content">
+                            <div className="list" id='list'>
                             {
         
                                 this.state.listArr.map( (item,index)=> {
@@ -127,6 +153,7 @@ export default class Interaction extends React.Component {
                                 }
                                 
                             </div>
+                            <div className="list2" id="list2"></div>
                         </div>
                         </Spin>
                     </Col>
