@@ -5,23 +5,11 @@ import {getCookie} from '../../../util';
 var now = new Date();
 var hour = now.getHours(); 
 // let dayMoment = '上午';
-var dayMoment = '111';
-if(hour < 6){
-    dayMoment = '凌晨';
-}else if (hour < 9) {
-    dayMoment = '早上';
-}else if(hour < 12) {
+var dayMoment = '上午';
+if(hour < 12) {
     dayMoment = '上午';
-}else if (hour < 14 ) {
-    dayMoment = '中午';
-}else if (hour < 17 ) {
-    dayMoment = '下午';
-}else if (hour < 19 ) {
-    dayMoment = '傍晚';
-}else if (hour < 22 ) {
-    dayMoment = '晚上';
 }else{
-    dayMoment = '夜里';
+    dayMoment = '下午';
 }
 
 
