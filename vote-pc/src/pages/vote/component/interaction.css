@@ -24,7 +24,7 @@
     
 }
 .vote-content .list{
-    width:500px;
+    width:90%;
     margin:0 auto;
 }
 .list span {
@@ -47,10 +47,13 @@
     margin: 38px auto;
 }
 .winner-wrap{
-    width:90%;
+    
     padding:15px;
 }
 .nickname{
     display: inline-block;
     width:200px;
+}
+.nickname_winner{
+    display: inline-block;
 }
