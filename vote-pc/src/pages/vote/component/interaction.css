@@ -4,12 +4,12 @@
 .interaction{
     height:650px;
 }
-.left{
+.interact_left{
     background: #fff;
     /* border-right:1px solid #e6e6e6; */
     height:640px;
 }
-.right{
+.interact_right{
     height:650px;
 }
 .btn-wrap{

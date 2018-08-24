@@ -43,22 +43,7 @@ export default class Interaction extends React.Component {
         this.handleDraw = this.handleDraw.bind(this);
     }
     componentDidMount(){
-        // axios.get(`${BASE_URL}/score/getWxUserList`).then( (response) =>  {
-        //     if(response.data.code == 200 ){
-        //         const wxuser= response.data.content;
-                
-        //         this.setState({
-        //             wxuser
-        //         })
-        //         console.log(wxuser)
-        //     }else{
-                
-        //     }
-        //     this.setState({scoreLoading:false});
-        // }).catch(function (error) {
-        //     this.setState({scoreLoading:false});
-        //     console.log(error);
-        // });
+       this.handleShowScore();
     }
     handleShowScore () {
         let scoreLoading = true;
@@ -119,7 +104,7 @@ export default class Interaction extends React.Component {
                     
           
             
-                    <Col className="left" span={19}>
+                    <Col className="interact_left" span={16}>
                         <Spin spinning={this.state.scoreLoading}>
                         <div className="btn-wrap">
                             <Button 
@@ -146,7 +131,7 @@ export default class Interaction extends React.Component {
                         </Spin>
                     </Col>
                 
-                    <Col className="right" span={5}>
+                    <Col className="interact_right" span={8}>
                         <Spin spinning={this.state.luckyLoading}>
                             <div className="btn-wrap">
                                 <Button 
