@@ -21,12 +21,23 @@ class ScoreModel {
 		})
 		return scoreInfo
 	}
+	// 查询所有的用户列表
 	static async getUserList () {
 		const user = await Score.findAll({
 			
 		})
 		return user
 	}
+	// 根据会员查询用户
+	static async getUserByMember (member) {
+		const userList = await Score.findAll({
+			where: {
+				member
+			}
+		})
+		return userList
+	}
+	
 	/**
 	 * 创建分数
 	 * @param score

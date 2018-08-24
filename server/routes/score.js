@@ -6,7 +6,8 @@ const router = new Router({
 
 router
   .post('/create', ScoreController.createScore)  // 
-  .post('/getuser/member', ScoreController.getUserList)  // 
+  .post('/getuser/list', ScoreController.getUserList)  // 
+  .post('/getuser/member', ScoreController.getUserByMember)  // 
   .get('/getAverage', ScoreController.getAverage) // 获取平均数
   .get('/getWxUserList', ScoreController.getWxUserList) // 获取用户信息
 

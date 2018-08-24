@@ -44,6 +44,24 @@ class ScoreController {
 			content:list
 		}
 	}
+	static async getUserByMember (ctx) {
+		const score = ctx.request.body;
+		if(score.member){
+			const list = await scoreModel.getUserByMember(score.member);
+			ctx.body = {
+				code: 200,
+				message: '创建成功',
+				content:list
+			}
+		}else{
+			ctx.body = {
+				code: -1,
+				message: '参数错误'
+			}
+		}
+		
+	}
+	
 	static async getAverage (ctx) {
 		const list = await scoreModel.getAvarageScoreList();	
 		console.log(list,'results')
