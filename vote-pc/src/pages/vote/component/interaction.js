@@ -63,7 +63,7 @@ export default class Interaction extends React.Component {
     handleShowScore () {
         let scoreLoading = true;
         this.setState({scoreLoading});
-        axios.post(`${BASE_URL}/score/getuser/member`, {member}).then( (response) =>  {
+        axios.post(`${BASE_URL}/score/getuser/list`, {member}).then( (response) =>  {
             if(response.data.code == 200 ){
                 const listArr= response.data.content;
                 
