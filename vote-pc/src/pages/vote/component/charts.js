@@ -71,12 +71,12 @@ class ScoreBar extends Component {
             animation:true,
             legend: {
                
-                data: ['现场评分平均分', '设备评分','专家评分'],
+                data: ['现场评分平均分占25%', '设备评分占25%','专家评分占50%'],
                 // 默认选中状态
                 selected: {
-					'现场评分平均分': true,
-					'设备评分': false,
-					'专家评分': false
+					'现场评分平均分占25%': true,
+					'设备评分占25%': false,
+					'专家评分占50%': false
                 },
                 top:20
             },
@@ -102,7 +102,7 @@ class ScoreBar extends Component {
             },
             series: [
                 {
-                    name: '现场评分平均分',
+                    name: '现场评分平均分占25%',
                     type: 'bar',
                     stack: '总量',
                     label: {
@@ -114,7 +114,7 @@ class ScoreBar extends Component {
                     data: averageScore
                 },
                 {
-                    name: '设备评分',
+                    name: '设备评分占25%',
                     type: 'bar',
                     stack: '总量',
                     label: {
@@ -126,7 +126,7 @@ class ScoreBar extends Component {
                     data: computer_score
                 },
                 {
-                    name: '专家评分',
+                    name: '专家评分占50%',
                     type: 'bar',
                     stack: '总量',
                     label: {
@@ -146,9 +146,7 @@ class ScoreBar extends Component {
         return (
             <section>
                 <Spin spinning={this.state.chartLoading}>
-                    <div style={{height: '50px', width: '100%', fontSize:'22px',display: 'flex', alignItems: 'center', justifyContent: 'center',} }>
-                        艾知星设备评分占25%,现场评分平均分占25%,专家评分占50%
-                    </div>
+                    
                     <div id="main" style={{ width: '600px', height: '600px',margin:'0 auto' }}></div>
                 </Spin>
             </section>
