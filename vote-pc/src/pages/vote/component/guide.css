@@ -10,8 +10,14 @@
 }
 .item{
     width:80%;
-    height:480px;
     margin:25px auto;
+    
+}
+.item img{
+    width:320px;
+    height:480px;
+    display: block;
+    margin: 0 auto;
     border:1px solid #e6e6e6;
     border-radius: 10px;
 }

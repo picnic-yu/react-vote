@@ -192,8 +192,8 @@ export default class Interaction extends React.Component {
                                                 style={{display: 'flex',padding:'5px'}}>
                                                 <div key = {item.headimgurl+index} style={{display: 'flex',padding:'5px',alignItems: 'center', justifyContent: 'center'}}>
                                                     <Avatar size='large' src={item.headimgurl}/>
-                                                    <span className='nickname'>{item.nickname}</span>
-                                                    <span className='score'> {item.member} 号选手 {item.score} 分</span>
+                                                    <span title={item.nickname} className='nickname'>{item.nickname}</span>
+                                                    <span className='score'> {item.member} 号： {item.score} 分</span>
                                                 </div>
                                             </Col>
                                             

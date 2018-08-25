@@ -7,16 +7,24 @@ export default class GuideWrap extends React.Component {
             <div >
                 <Row gutter={16} className='content'>
                     <Col  span={6}>
-                        <div className='item'>col-6</div>
+                        <div className='item'>
+                        <img  src='http://new.szdtb.com/image/step1.png' />
+                        </div>
                     </Col>
                     <Col  span={6}>
-                        <div className='item'>col-6</div>
+                        <div className='item'>
+                            <img  src='http://new.szdtb.com/image/step2.png' />
+                        </div>
                     </Col>
                     <Col  span={6}>
-                        <div className='item'>col-6</div>
+                        <div className='item'>
+                        <img  src='http://new.szdtb.com/image/step3.png' />
+                        </div>
                     </Col>
                     <Col  span={6}>
-                        <div className='item'>col-6</div>
+                        <div className='item'>
+                        <img  src='http://new.szdtb.com/image/step4.png' />
+                        </div>
                     </Col>
                 </Row>
                 <Row gutter={16} className="bottom-wrap">

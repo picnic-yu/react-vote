@@ -53,6 +53,9 @@
 .nickname{
     display: inline-block;
     width:200px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
 }
 .nickname_winner{
     display: inline-block;

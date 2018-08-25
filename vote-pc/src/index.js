@@ -4,7 +4,7 @@ import './index.css';
 import Vote from './pages/vote/index';
 import reducer from './redux/reducer';
 import registerServiceWorker from './registerServiceWorker';
-
+import './index.css'
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import {
