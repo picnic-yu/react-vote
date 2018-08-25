@@ -135,9 +135,9 @@ export default class Interaction extends React.Component {
         
         let allUserList = this.state.allUserList;
         let wxuser = this.state.wxuser;
-        if(wxuser.length == 6){
-            return 
-        }
+        // if(wxuser.length == 6){
+        //     return 
+        // }
         this.setState({luckyLoading:true});
         let arr = getArrItem(allUserList,1);
         if(arr.length){
