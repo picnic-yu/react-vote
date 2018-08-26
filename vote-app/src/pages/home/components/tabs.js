@@ -36,7 +36,7 @@ const HomeTab = (props) => (
             initalPage={'t2'}
             renderTabBar={renderTabBar}
         >
-            <div style={{  height: '46vh', backgroundColor: '#fff' }}>
+            <div style={{  height: '50vh', backgroundColor: '#fff' }}>
                 <Title></Title>
                 {
                     content(props)

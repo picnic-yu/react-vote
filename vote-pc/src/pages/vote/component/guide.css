@@ -1,5 +1,5 @@
 .content{
-    height:530px;
+    /* height:530px; */
 }
 
 .bottom-wrap{
@@ -14,8 +14,8 @@
     
 }
 .item img{
-    width:270px;
-    height:480px;
+    width:100%;
+    height:100%;
     display: block;
     margin: 0 auto;
     border:1px solid #e6e6e6;

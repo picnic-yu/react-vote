@@ -30,15 +30,15 @@ export default class GuideWrap extends React.Component {
                 <p className='companyDec'>该系统可为学校、医院、诊所等口腔专业人员提供示教、临床训练、考试等操作服务，并可搭建交互式教学网络，实现学生自主训练，教师实时监测、指导，远程教学等功能。</p>
               
                 <div >
-                    <Row gutter={16} >
+                    <Row gutter={16} style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                         <Col  span={8}>
-                            <img  style={{margin:'0 auto',width:'400px',height:'400px'} } src='http://new.szdtb.com/image/scan.png' />
+                            <img  style={{margin:'0 auto',width:'100%',height:'100%'} } src='http://new.szdtb.com/image/scan.png' />
+                        </Col>
+                        <Col  span={8} >
+                            <img style={{margin:'0 auto',width:'100%',height:'100%'} } src='http://new.szdtb.com/image/display1.png' />
                         </Col>
                         <Col  span={8}>
-                        <img style={{margin:'0 auto',width:'400px',height:'400px'} } src='http://new.szdtb.com/image/display1.png' />
-                        </Col>
-                        <Col  span={8}>
-                        <img  style={{margin:'0 auto',width:'400px',height:'400px'} } src='http://new.szdtb.com/image/display2.png' />
+                        <img  style={{margin:'0 auto',width:'100%',height:'100%'} } src='http://new.szdtb.com/image/display2.png' />
                         </Col>
                     
                     </Row>

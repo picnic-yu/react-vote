@@ -61,9 +61,9 @@ class Home extends React.Component {
                     <img  style={{ width: '100%'}}src='http://new.szdtb.com/image/kaidier-bg.jpg' />
                 </div>
                <HomeTab score={score} handleInputChange={handleInputChange} handleStateChange={handleStateChange}></HomeTab>
-               <div style={{height: '12vh', width: '100%', background:'#1B7FA0',textAlign:'center',padding:'1vh 0'} }>
-                    <p >活动最终解释权</p>
-                    <p>归苏州迪凯尔医疗科技有限公司所有</p>
+               <div style={{ width: '100%', color:'#fff',background:'#1B7FA0',textAlign:'center',padding:'5px 0'} }>
+                    <p style={{margin:'.5vh 0'}}>活动最终解释权</p>
+                    <p style={{margin:'.5vh 0'}}>归苏州迪凯尔医疗科技有限公司所有</p>
                 </div>
             </div>
         );

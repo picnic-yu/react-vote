@@ -9,7 +9,7 @@ export default class Step extends React.Component{
     render(){
         return(
             <div className='stepWrap'>
-                <img style={{height: '34vh', width: '100vw'} } src='http://new.szdtb.com/image/step-logo.png' />
+                <img style={{height: '100%', width: '100vw'} } src='http://new.szdtb.com/image/step-logo.png' />
                 
                 <p className='step-title'>中华口腔医学会</p>
                 <p className='step-title'>第20次全国口腔医学学术会议</p>
