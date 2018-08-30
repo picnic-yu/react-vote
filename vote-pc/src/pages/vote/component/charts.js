@@ -49,9 +49,9 @@ class ScoreBar extends Component {
         });
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
-        var expert_score = [68, 75, 66, 75, 80, 85];                           //专家
-        var computer_score = [90, 85, 88, 75, 90, 82];//设备
-        const averageScore = await asyncAction('/score/getAverage') ||  [70, 80, 60, 90, 88, 90,]; //平均分
+        var expert_score = [68, 75, 66, 75, 80, 85,90, 85, 88, 75, 90, 82];                           //专家
+        var computer_score = [90, 85, 88, 75, 90, 82,90, 85, 88, 75, 90, 82];//设备
+        const averageScore = await asyncAction('/score/getAverage') ||  [70, 80, 60, 90, 88, 90,70, 80, 60, 90, 88, 90]; //平均分
         const otherScore = await getOtherScoreAction('/otherscore/getAverage');
         if(otherScore){
             computer_score = otherScore.computer_scoreArr;
@@ -88,7 +88,7 @@ class ScoreBar extends Component {
             },
             xAxis:  {
                 type: 'category',
-                data: ['1号','2号','3号','4号','5号','6号'],
+                data: ['1号','2号','3号','4号','5号','6号','7号','8号','9号','10号','11号','12号'],
                 axisTick:{
                     show:false
                 },

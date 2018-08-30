@@ -1,8 +1,8 @@
 import React from 'react';
-import { Form, InputNumber , Button, Checkbox,Radio,Spin,message } from 'antd';
+import { Form, InputNumber , Button, Checkbox,Spin,message,Select } from 'antd';
 import { BASE_URL} from 'src/util';
 import axios from 'axios';
-const RadioGroup = Radio.Group;
+const Option = Select.Option;
 const FormItem = Form.Item;
 
 const formItemLayout = {
@@ -74,8 +74,9 @@ class Other extends React.Component {
             expert_score
         });
     }
-    onChange = async (e) => {
-        const member = e.target.value
+    onChange = async (value) => {
+        console.log(value)
+        const member = value
         await this.setState({
             member
         });
@@ -96,14 +97,20 @@ class Other extends React.Component {
                                     message: '请选择选手',
                                 }],
                             })(
-                                <RadioGroup onChange={this.onChange} >
-                                    <Radio value={1}>1号</Radio>
-                                    <Radio value={2}>2号</Radio>
-                                    <Radio value={3}>3号</Radio>
-                                    <Radio value={4}>4号</Radio>
-                                    <Radio value={5}>5号</Radio>
-                                    <Radio value={6}>6号</Radio>
-                                </RadioGroup>
+                                <Select  style={{ width: '100%' }} onChange={this.onChange}>
+                                    <Option value={1}>1号</Option>
+                                    <Option value={2}>2号</Option>
+                                    <Option value={3}>3号</Option>
+                                    <Option value={4}>4号</Option>
+                                    <Option value={5}>5号</Option>
+                                    <Option value={6}>6号</Option>
+                                    <Option value={7}>7号</Option>
+                                    <Option value={8}>8号</Option>
+                                    <Option value={9}>9号</Option>
+                                    <Option value={10}>10号</Option>
+                                    <Option value={11}>11号</Option>
+                                    <Option value={12}>12号</Option>
+                                </Select>
                             )}
                         </FormItem>
                         <FormItem {...formItemLayout} label="设备分数">

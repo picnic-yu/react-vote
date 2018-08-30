@@ -170,13 +170,19 @@ export default class Interaction extends React.Component {
                         </div>
                         <div style={{height: '60px', width: '100%',fontSize:'25px',display: 'flex', alignItems: 'center', justifyContent: 'center'} }>
                             <RadioGroup onChange={this.onChange} value={this.state.value}>
+                                <Radio value={0}>全部</Radio>
                                 <Radio value={1}>1号</Radio>
                                 <Radio value={2}>2号</Radio>
                                 <Radio value={3}>3号</Radio>
                                 <Radio value={4}>4号</Radio>
                                 <Radio value={5}>5号</Radio>
                                 <Radio value={6}>6号</Radio>
-                                <Radio value={0}>全部</Radio>
+                                <Radio value={7}>7号</Radio>
+                                <Radio value={8}>8号</Radio>
+                                <Radio value={9}>9号</Radio>
+                                <Radio value={10}>10号</Radio>
+                                <Radio value={11}>11号</Radio>
+                                <Radio value={12}>12号</Radio>
                             </RadioGroup>
                         </div>
                         
