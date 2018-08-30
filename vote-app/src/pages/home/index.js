@@ -12,11 +12,16 @@ let local = window.location.href;
 const code = getUrlParams('code');
 let redirect_uri = encodeURIComponent(local)
 let userInfo = {};
-
+function getQueryString(name) { 
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+        var r = window.location.search.substr(1).match(reg); 
+        if (r != null) return unescape(r[2]); 
+        return null; 
+    } 
 let url = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${redirect_uri}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect`;
 if(code == null || code ==''){
     const startIndex = window.location.href.indexOf('member');
-    const member =  window.location.href.slice(startIndex,startIndex+8).split('=')[1];
+    var member =  parseInt(window.location.href.slice(startIndex,startIndex+9).split('=')[1]);
     setCookie('member',member);
     window.location.href = url;
     
